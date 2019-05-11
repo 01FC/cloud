@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        tools:context=".main.MainActivity"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:adjustViewBounds="true"
+            android:id="@+id/fb_button_fan"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/fanoff"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline01h"
+            app:layout_constraintEnd_toEndOf="@+id/guideline01v"
+            app:layout_constraintStart_toStartOf="@+id/guideline01v"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:adjustViewBounds="true"
+            android:id="@+id/fb_button_light"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/lightbulboff"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline01h"
+            app:layout_constraintEnd_toEndOf="@+id/guideline02v"
+            app:layout_constraintStart_toStartOf="@+id/guideline02v"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:adjustViewBounds="true"
+            android:id="@+id/fb_button_water"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/wateroff"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline01h"
+            app:layout_constraintEnd_toEndOf="@+id/guideline03v"
+            app:layout_constraintStart_toStartOf="@+id/guideline03v"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline01h"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:adjustViewBounds="true"
+            android:id="@+id/iv_image_main"
+            android:layout_height="100dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="100dp"
+            android:src="@drawable/grass_black"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline02h"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline01h"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline02h"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:adjustViewBounds="true"
+            android:id="@+id/fb_button_stats"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/graph"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline04v"
+            app:layout_constraintTop_toBottomOf="@+id/guideline02h"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:elevation="6dp"
+            android:id="@+id/fb_co2"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/smokepipeon"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/fb_button_stats"
+            app:layout_constraintEnd_toStartOf="@+id/fb_button_stats"
+            app:layout_constraintTop_toTopOf="@+id/fb_button_stats"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:elevation="6dp"
+            android:id="@+id/fb_temp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/thermometer"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/fb_co2"
+            app:layout_constraintEnd_toStartOf="@+id/fb_co2"
+            app:layout_constraintTop_toTopOf="@+id/fb_co2"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:elevation="6dp"
+            android:id="@+id/fb_hum"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/wateron"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/fb_temp"
+            app:layout_constraintEnd_toStartOf="@+id/fb_temp"
+            app:layout_constraintTop_toTopOf="@+id/fb_temp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline01v"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline02v"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline03v"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline04v"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.80"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
